@@ -9,13 +9,13 @@ const ELM_FILE_PATH = path.join(DIR_PATH, OUTPUT_FILE_NAME);
 const COMPILED = fs.existsSync(ELM_FILE_PATH);
 const OPTIMIZED = true;
 
-elmStaticHtml()
+elmHtmlToPort()
   .then(generatedHtml => {
     console.log(generatedHtml);
   })
   .catch(console.error);
 
-async function elmStaticHtml() {
+async function elmHtmlToPort() {
   if (COMPILED === true) {
     return runElmApp(DIR_PATH).then(outputs => {
       return outputs;
@@ -63,4 +63,4 @@ function runElmApp(dirPath) {
   });
 }
 
-exports.elmStaticHtml = elmStaticHtml;
+exports.elmHtmlToPort = elmHtmlToPort;
