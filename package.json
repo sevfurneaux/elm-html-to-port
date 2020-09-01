@@ -1,0 +1,17 @@
+{
+  "name": "elm-html-to-port",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Sev Furneaux",
+  "license": "none",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "devDependencies": {
+    "elm-format": "^0.8.3"
+  },
+  "dependencies": {
+    "node-elm-compiler": "^5.0.5",
+    "xhr2": "^0.2.0"
+  }
+}
