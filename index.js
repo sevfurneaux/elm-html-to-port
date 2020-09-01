@@ -62,5 +62,3 @@ function runElmApp(dirPath) {
     app.ports["htmlOut"].subscribe(resolve);
   });
 }
-
-exports.elmHtmlToPort = elmHtmlToPort;
