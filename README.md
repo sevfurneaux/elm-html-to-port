@@ -26,4 +26,4 @@ yarn start
 ## Credits
 
 -   [eeue56](https://github.com/eeue56)'s original implementation: [elm-static-html-lib](https://github.com/eeue56/elm-static-html-lib). Thank you Noah for your hard work on the original implementation! ❤️
--   [dawehner](https://github.com/dawehner)'s 0.19 forked implementation: [elm-static-html-lib](https://github.com/dawehner/elm-static-html-lib)
+-   [dawehner](https://github.com/dawehner)'s 0.19 forked implementation: [elm-static-html-lib](https://github.com/dawehner/elm-static-html-lib). Thank you David for porting the original implementation to Elm 0.10! 💪
