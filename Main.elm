@@ -5,7 +5,7 @@ import ElmHtml.ToString exposing (FormatOptions, defaultFormatOptions, nodeToStr
 import Html exposing (Html)
 import Http
 import Json.Decode as Decode
-import Json.Encode as JE
+import Json.Encode as Encode
 import Platform
 
 
@@ -107,7 +107,7 @@ viewDecoder options viewHtml =
 
 asJsonView : Html msg -> Decode.Value
 asJsonView x =
-    JE.string "REPLACE_ME_WITH_JSON_STRINGIFY"
+    Encode.string "REPLACE_ME_WITH_JSON_STRINGIFY"
 
 
 view : String -> Html msg
