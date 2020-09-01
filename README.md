@@ -4,6 +4,11 @@ This project is an example of sending [Elm HTML](https://package.elm-lang.org/pa
 
 It is a simplified version of eeue56's [elm-static-html-lib](https://github.com/eeue56/elm-static-html-lib).
 
+## Requirements
+
+-   [node](https://nodejs.org/)
+-   [yarn](http://yarnpkg.com/)
+
 ## Installation
 
 Run this command to install the JavaScript dependencies:
