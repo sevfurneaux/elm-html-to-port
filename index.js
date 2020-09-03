@@ -27,7 +27,7 @@ async function elmHtmlToPort() {
   });
 }
 
-function runCompiler(rootDir) {
+function runCompiler() {
   return new Promise((resolve, reject) => {
     const compileProcess = compile("Main.elm", {
       cwd: DIR_PATH,
@@ -40,7 +40,7 @@ function runCompiler(rootDir) {
         return reject(exitCode);
       }
 
-      return runElmApp(rootDir).then(resolve).catch(reject);
+      return runElmApp().then(resolve).catch(reject);
     });
   });
 }
