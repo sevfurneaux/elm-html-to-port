@@ -6,7 +6,8 @@ XMLHttpRequest = require("xhr2");
 const DIR_PATH = process.cwd();
 const OUTPUT_FILE_NAME = "elm.js";
 const ELM_FILE_PATH = path.join(DIR_PATH, OUTPUT_FILE_NAME);
-const COMPILED = fs.existsSync(ELM_FILE_PATH);
+const COMPILED =
+  process.env.NODE_ENV === "production" ? fs.existsSync(ELM_FILE_PATH) : false;
 const OPTIMIZED = true;
 
 elmHtmlToPort()
