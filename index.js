@@ -17,12 +17,12 @@ elmHtmlToPort()
 
 async function elmHtmlToPort() {
   if (COMPILED === true) {
-    return runElmApp(DIR_PATH).then(outputs => {
+    return runElmApp().then(outputs => {
       return outputs;
     });
   }
 
-  return runCompiler(DIR_PATH).then(results => {
+  return runCompiler().then(results => {
     return results;
   });
 }
@@ -30,7 +30,7 @@ async function elmHtmlToPort() {
 function runCompiler(rootDir) {
   return new Promise((resolve, reject) => {
     const compileProcess = compile("Main.elm", {
-      cwd: rootDir,
+      cwd: DIR_PATH,
       output: OUTPUT_FILE_NAME,
       optimize: OPTIMIZED
     });
@@ -45,7 +45,7 @@ function runCompiler(rootDir) {
   });
 }
 
-function runElmApp(dirPath) {
+function runElmApp() {
   return new Promise((resolve, _) => {
     const elmFileContent = fs.readFileSync(ELM_FILE_PATH, "utf-8");
 
