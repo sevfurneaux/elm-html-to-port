@@ -8,7 +8,7 @@ const OUTPUT_FILE_NAME = "elm.js";
 const ELM_FILE_PATH = path.join(DIR_PATH, OUTPUT_FILE_NAME);
 const COMPILED =
   process.env.NODE_ENV === "production" ? fs.existsSync(ELM_FILE_PATH) : false;
-const OPTIMIZED = true;
+const OPTIMIZED = false;
 
 elmHtmlToPort()
   .then(generatedHtml => {
@@ -54,7 +54,7 @@ function runElmApp() {
       ELM_FILE_PATH,
       elmFileContent.replace(
         "return $elm$json$Json$Encode$string('REPLACE_ME_WITH_JSON_STRINGIFY')",
-        "return x"
+        OPTIMIZED ? "return x" : "return _Json_wrap(x)"
       )
     );
 
